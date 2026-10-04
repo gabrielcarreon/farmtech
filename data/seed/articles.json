@@ -1,0 +1,92 @@
+[
+  {
+    "crop": "Tomato",
+    "region": "Central Luzon",
+    "title": "Dry-season tomato buying stays firm",
+    "source": "Sample market wire",
+    "published_at": "2026-09-20",
+    "content": "Traders in Central Luzon reported steady demand for tomato and a favorable harvest pace. Supply looked adequate rather than scarce.",
+    "sentiment": {"sentiment": "positive", "score": 0.62, "confidence": 0.74, "entities": ["tomato", "Central Luzon"], "topics": ["price", "supply"]}
+  },
+  {
+    "crop": "Tomato",
+    "region": "Central Luzon",
+    "title": "Field rain slows some tomato picking",
+    "source": "Sample farm desk",
+    "published_at": "2026-09-26",
+    "content": "A burst of rain and a local flood warning delayed harvest on a few tomato plots. Traders called the damage limited.",
+    "sentiment": {"sentiment": "negative", "score": -0.28, "confidence": 0.66, "entities": ["tomato"], "topics": ["weather", "supply"]}
+  },
+  {
+    "crop": "Maize",
+    "region": "Central Luzon",
+    "title": "Maize prices hold near the monthly average",
+    "source": "Sample market wire",
+    "published_at": "2026-09-18",
+    "content": "Maize prices were stable and local demand from feed mills was described as adequate.",
+    "sentiment": {"sentiment": "neutral", "score": 0.08, "confidence": 0.7, "entities": ["maize"], "topics": ["price"]}
+  },
+  {
+    "crop": "Rice",
+    "region": "Central Luzon",
+    "title": "Palay buying continues with government support",
+    "source": "Sample policy note",
+    "published_at": "2026-09-12",
+    "content": "A subsidy and procurement support kept rice selling interest stable. Farmers described the buying price as adequate.",
+    "sentiment": {"sentiment": "positive", "score": 0.45, "confidence": 0.8, "entities": ["rice"], "topics": ["policy", "price"]}
+  },
+  {
+    "crop": "Onion",
+    "region": "Central Luzon",
+    "title": "Onion supply concerns return before planting",
+    "source": "Sample market wire",
+    "published_at": "2026-09-22",
+    "content": "Traders talked about a shortage risk if the dry season is disrupted. Price volatility and possible losses were mentioned more than export demand.",
+    "sentiment": {"sentiment": "negative", "score": -0.55, "confidence": 0.72, "entities": ["onion", "Central Luzon"], "topics": ["supply", "price"]}
+  },
+  {
+    "crop": "Onion",
+    "region": "Central Luzon",
+    "title": "Cold storage onion stocks are still moving",
+    "source": "Sample farm desk",
+    "published_at": "2026-09-27",
+    "content": "Stored onion continued to sell. The note was cautious but not a report of blight or flood damage.",
+    "sentiment": {"sentiment": "neutral", "score": -0.05, "confidence": 0.6, "entities": ["onion"], "topics": ["supply"]}
+  },
+  {
+    "crop": "Eggplant",
+    "region": "Central Luzon",
+    "title": "Eggplant demand improves at the trading post",
+    "source": "Sample market wire",
+    "published_at": "2026-09-16",
+    "content": "Eggplant demand improved and the harvest was described as favorable. Prices were firm without a shortage.",
+    "sentiment": {"sentiment": "positive", "score": 0.58, "confidence": 0.69, "entities": ["eggplant"], "topics": ["price", "supply"]}
+  },
+  {
+    "crop": "Tomato",
+    "region": "CALABARZON",
+    "title": "Laguna tomato supply looks adequate",
+    "source": "Sample market wire",
+    "published_at": "2026-09-19",
+    "content": "Tomato supply in Laguna was adequate and prices were stable.",
+    "sentiment": {"sentiment": "positive", "score": 0.3, "confidence": 0.64, "entities": ["tomato"], "topics": ["supply"]}
+  },
+  {
+    "crop": "Rice",
+    "region": "Ilocos",
+    "title": "Pangasinan rice fields watch typhoon tracks",
+    "source": "Sample weather desk",
+    "published_at": "2026-09-21",
+    "content": "A typhoon watch raised the chance of flood damage in rice areas of Pangasinan. Farmers were urged to protect stored palay.",
+    "sentiment": {"sentiment": "negative", "score": -0.48, "confidence": 0.71, "entities": ["rice"], "topics": ["weather"]}
+  },
+  {
+    "crop": "Maize",
+    "region": "Ilocos",
+    "title": "Ilocos maize export interest is small but positive",
+    "source": "Sample market wire",
+    "published_at": "2026-09-14",
+    "content": "A modest export inquiry supported maize sentiment. Traders still called the move limited.",
+    "sentiment": {"sentiment": "positive", "score": 0.36, "confidence": 0.58, "entities": ["maize"], "topics": ["price"]}
+  }
+]

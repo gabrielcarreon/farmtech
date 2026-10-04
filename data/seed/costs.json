@@ -1,0 +1,7 @@
+{
+  "Tomato": {"Central Luzon": 180000, "CALABARZON": 190000, "Ilocos": 175000},
+  "Maize": {"Central Luzon": 70000, "CALABARZON": 74000, "Ilocos": 68000},
+  "Rice": {"Central Luzon": 65000, "CALABARZON": 68000, "Ilocos": 62000},
+  "Onion": {"Central Luzon": 220000, "CALABARZON": 230000, "Ilocos": 210000},
+  "Eggplant": {"Central Luzon": 120000, "CALABARZON": 125000, "Ilocos": 118000}
+}

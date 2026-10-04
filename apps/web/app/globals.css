@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1a2820;
+  background: #e7efe4;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Figtree, sans-serif;
+  background:
+    radial-gradient(circle at 8% -10%, rgba(168, 107, 18, 0.18), transparent 36%),
+    radial-gradient(circle at 100% 0%, rgba(30, 70, 50, 0.16), transparent 32%),
+    repeating-linear-gradient(90deg, rgba(30, 70, 50, 0.045) 0 1px, transparent 1px 84px),
+    #e7efe4;
+}
+
+h1, h2, h3, .display {
+  font-family: Fraunces, Georgia, serif;
+}
+
+input, select, textarea {
+  font: inherit;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.55s ease both;
+}

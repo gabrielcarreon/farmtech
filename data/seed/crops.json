@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Tomato",
+    "scientific_name": "Solanum lycopersicum",
+    "category": "vegetable",
+    "description": "Warm-season fruit crop commonly planted in the Luzon dry season.",
+    "growing_days_min": 75,
+    "growing_days_max": 100,
+    "optimal_temperature_min": 18,
+    "optimal_temperature_max": 29,
+    "optimal_rainfall_min": 400,
+    "optimal_rainfall_max": 600,
+    "water_requirement": "Steady moisture without prolonged waterlogging",
+    "soil_requirements": "Well-drained loam or clay loam",
+    "suitable_months": [1, 2, 10, 11, 12],
+    "production_sensitivity": 0.55,
+    "variety": {
+      "name": "Sample determinate tomato",
+      "description": "Bundled sample variety, not a named commercial release.",
+      "growing_days": 90,
+      "yield_min": 12000,
+      "yield_max": 22000
+    }
+  },
+  {
+    "name": "Maize",
+    "scientific_name": "Zea mays",
+    "category": "grain",
+    "description": "Flexible grain crop with a shorter sensitivity to brief dry spells than rice.",
+    "growing_days_min": 95,
+    "growing_days_max": 120,
+    "optimal_temperature_min": 18,
+    "optimal_temperature_max": 32,
+    "optimal_rainfall_min": 500,
+    "optimal_rainfall_max": 800,
+    "water_requirement": "Most water around tasseling",
+    "soil_requirements": "Fertile, well-drained soil",
+    "suitable_months": [1, 5, 6, 11, 12],
+    "production_sensitivity": 0.4,
+    "variety": {
+      "name": "Sample yellow maize",
+      "description": "Bundled sample variety.",
+      "growing_days": 105,
+      "yield_min": 4000,
+      "yield_max": 7000
+    }
+  },
+  {
+    "name": "Rice",
+    "scientific_name": "Oryza sativa",
+    "category": "grain",
+    "description": "Lowland rice used here as a wet-season and late-year sample crop.",
+    "growing_days_min": 110,
+    "growing_days_max": 140,
+    "optimal_temperature_min": 22,
+    "optimal_temperature_max": 34,
+    "optimal_rainfall_min": 900,
+    "optimal_rainfall_max": 1800,
+    "water_requirement": "Standing or reliable irrigation for much of the season",
+    "soil_requirements": "Paddy clay that holds water",
+    "suitable_months": [6, 7, 8, 11, 12],
+    "production_sensitivity": 0.45,
+    "variety": {
+      "name": "Sample lowland rice",
+      "description": "Bundled sample variety.",
+      "growing_days": 120,
+      "yield_min": 3500,
+      "yield_max": 5500
+    }
+  },
+  {
+    "name": "Onion",
+    "scientific_name": "Allium cepa",
+    "category": "vegetable",
+    "description": "Dry-season bulb crop. The sample marks Laguna as a weak fit.",
+    "growing_days_min": 90,
+    "growing_days_max": 130,
+    "optimal_temperature_min": 15,
+    "optimal_temperature_max": 27,
+    "optimal_rainfall_min": 300,
+    "optimal_rainfall_max": 500,
+    "water_requirement": "Light, controlled irrigation; bulbs suffer in prolonged rain",
+    "soil_requirements": "Loose, well-drained soil",
+    "suitable_months": [10, 11, 12],
+    "production_sensitivity": 0.7,
+    "variety": {
+      "name": "Sample red onion",
+      "description": "Bundled sample variety.",
+      "growing_days": 110,
+      "yield_min": 8000,
+      "yield_max": 15000
+    }
+  },
+  {
+    "name": "Eggplant",
+    "scientific_name": "Solanum melongena",
+    "category": "vegetable",
+    "description": "Warm-season vegetable with a long harvest window.",
+    "growing_days_min": 80,
+    "growing_days_max": 120,
+    "optimal_temperature_min": 20,
+    "optimal_temperature_max": 32,
+    "optimal_rainfall_min": 450,
+    "optimal_rainfall_max": 800,
+    "water_requirement": "Regular watering, sensitive to drought at flowering",
+    "soil_requirements": "Fertile loam with good drainage",
+    "suitable_months": [1, 2, 10, 11, 12],
+    "production_sensitivity": 0.5,
+    "variety": {
+      "name": "Sample long purple eggplant",
+      "description": "Bundled sample variety.",
+      "growing_days": 100,
+      "yield_min": 15000,
+      "yield_max": 28000
+    }
+  }
+]

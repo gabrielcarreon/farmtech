@@ -1,0 +1,97 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: crop
+      POSTGRES_PASSWORD: crop
+      POSTGRES_DB: crop_intelligence
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infrastructure/docker/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crop -d crop_intelligence"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://crop:crop@postgres:5432/crop_intelligence
+      REDIS_URL: redis://redis:6379/0
+      AI_SERVICE_URL: http://ai:8100
+      AI_API_KEY: dev-ai-key
+      EMBEDDING_DIMENSION: "384"
+      OPEN_METEO_BASE_URL: https://api.open-meteo.com/v1/forecast
+      CORS_ORIGINS: http://localhost:3000
+      PREDICTION_MODEL_VERSION: v0.1
+      SEED_DATA_DIR: /data/seed
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "alembic upgrade head && python -m app.seed &&
+      uvicorn app.main:app --host 0.0.0.0 --port 8000"
+
+  worker:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://crop:crop@postgres:5432/crop_intelligence
+      REDIS_URL: redis://redis:6379/0
+      AI_SERVICE_URL: http://ai:8100
+      AI_API_KEY: dev-ai-key
+      EMBEDDING_DIMENSION: "384"
+      SEED_DATA_DIR: /data/seed
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: arq app.worker.WorkerSettings
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+  ai:
+    profiles: ["ai"]
+    build:
+      context: .
+      dockerfile: ai/Dockerfile
+    ports:
+      - "8100:8100"
+    environment:
+      AI_API_KEY: dev-ai-key
+      EMBEDDING_DIMENSION: "384"
+      EMBEDDING_MODEL: all-MiniLM-L6-v2
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-}
+
+volumes:
+  pgdata:

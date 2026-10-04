@@ -1,0 +1,12 @@
+{
+  "source": "MVP sample yield dataset",
+  "years": [2024, 2025],
+  "yields_kg_ha": {
+    "Tomato": {"Nueva Ecija": [14000, 19000], "Bulacan": [13000, 18000], "Laguna": [12500, 17000], "Pangasinan": [12000, 16500]},
+    "Maize": {"Nueva Ecija": [4500, 6200], "Bulacan": [4300, 6000], "Laguna": [4200, 5800], "Pangasinan": [4800, 6500]},
+    "Rice": {"Nueva Ecija": [4200, 5200], "Bulacan": [4000, 5000], "Laguna": [3900, 4900], "Pangasinan": [3800, 4700]},
+    "Onion": {"Nueva Ecija": [11000, 15000], "Bulacan": [9000, 13000], "Laguna": [7000, 10000], "Pangasinan": [10000, 14000]},
+    "Eggplant": {"Nueva Ecija": [17000, 25000], "Bulacan": [16000, 24000], "Laguna": [18000, 26000], "Pangasinan": [15000, 22000]}
+  },
+  "unsuitable": [{"crop": "Onion", "province": "Laguna"}]
+}
